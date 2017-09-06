@@ -3,28 +3,20 @@ basic python
 Currently doing the course "Introduction to Python: Fundamental" by Microsoft. Most of python flow and mini project in this repo are based from the course.
 
 
-
-# [ ] assign a string 5 or more letters long to the variable: street_name
-# [ ] print the 1st, 3rd and 5th characters
-
-street_name = "hello"
-print (street_name[0])
-print (street_name[2])
-print (street_name[4])
+##  Program: print each word in a quote
 
 
-# [ ] Create an input variable: team_name - ask that second letter = "i", "o", or "u"
-# [ ] Test if team_name 2nd character = "i", "o", or "u" and print a message
-# note: use if, elif and else
-
-team_name = input("type your team name")
-if team_name[1].lower == "i":
-  print ("your second letter is i")
-elif team_name[1].lower == "o":
-  print ("your second letter is o")
-elif team_name[1].lower == "u":
-  print ("your second letter is u")
-else:
-  print (" you second letter is " + team_name[1] )
-  
- 
+quote = "they stumble who run fast"
+start = 0
+space_index = quote.find(" ")
+while space_index != -1:
+    print ("index for 'space' is : " + str(space_index))
+    y = int(space_index)
+    space_index = quote.find(" ", space_index +1)
+    print ('this is start ' + str(start))
+    print('this is y ' + str(y))
+    print('"' + quote[start:y] + '"', "\n")
+    start = 0 + y 
+    
+    
+    ## this code is too complex i think. Maybe can simplify by a lot by using function that i have nnot learnt yet.
