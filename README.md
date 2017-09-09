@@ -1,22 +1,45 @@
-# learning-python
-basic python 
-Currently doing the course "Introduction to Python: Fundamental" by Microsoft. Most of python flow and mini project in this repo are based from the course.
+Program: Words after "G"/"g"¶
+Create a program inputs a phrase (like a famous quotation) and prints all of the words that start with h-z
+Sample input:
+enter a 1 sentence quote, non-alpha separate words: Wheresoever you go, go with all your heart
+Sample output:
+WHERESOEVER
+YOU
+WITH
+YOUR
+HEART
+split the words by building a placeholder variable: word
+loop each character in the input string
+check if character is a letter
+add a letter to word each loop until a non-alpha char is encountered
+if character is alpha
+add character to word
+non-alpha detected (space, punctuation, digit,...) defines the end of a word and goes to else
+else
+check if word is greater than "g" alphabetically
+print word
+set word = empty string
+or else
+set word = empty string and build the next word
+Hint: use .lower()
+-----------------------------------------------------------------------------------------------------------------------------------------
 
+# [] create words after "G"
+# sample quote "Wheresoever you go, go with all your heart" ~ Confucius (551 BC - 479 BC)
+alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p","q","r","s","t","u","v","w","x","y","z"]
+#alpha_upper = [i.upper() for i in alpha]
+#print (alpha_upper)
 
-##  Program: print each word in a quote
+word = ""
+print ("index for the letter 'g' is : " + str(alpha.index("g")))
+print ("index for the letter 'z' is : " + str(alpha.index("z")))
 
-
-quote = "they stumble who run fast"
-start = 0
-space_index = quote.find(" ")
-while space_index != -1:
-    print ("index for 'space' is : " + str(space_index))
-    y = int(space_index)
-    space_index = quote.find(" ", space_index +1)
-    print ('this is start ' + str(start))
-    print('this is y ' + str(y))
-    print('"' + quote[start:y] + '"', "\n")
-    start = 0 + y 
-    
-    
-    ## this code is too complex i think. Maybe can simplify by a lot by using function that i have nnot learnt yet.
+quote = input("please type a quote :")
+x = quote.lower()
+print (x)
+for i in x:
+    if i in alpha[6:26]:
+        word += i
+    else:
+        print (i)
+print ("the word is : " + word)
