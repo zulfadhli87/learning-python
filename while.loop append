@@ -1,0 +1,23 @@
+while loop .append()
+define an empty list: bday_survey
+get user input, bday, asking for the day of the month they were born (1-31) or "q" to finish
+using a while loop (while user not entering "quit")
+append the bday input to the bday_survey list
+get user input, bday, asking for the day of the month they were born (1-31) or "q" to finish
+print bday_survey list
+
+----------------------------------------------------------------------------------------------
+
+# [ ] complete the Birthday Survey task above
+bday_survey = []
+
+bday = []
+print ("please input your birthday date, type 'q' tu quit")
+while True:
+    bday = input("input your birthday")
+    if bday == 'q':
+        break
+    else:
+        bday_survey.append(bday)
+    
+print(bday_survey)
